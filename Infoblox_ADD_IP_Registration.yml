@@ -1,1 +1,17 @@
+---
 
+- name: Add Endpoint Identity Groups to Cisco ISE
+  hosts: 172.17.20.151
+  gather_facts: false
+  tasks:
+    - name: make REST call
+      uri:
+        url: https://172.17.20.151:9060/ers/config/endpointgroup
+        user: "{{ user }}"
+        password: "{{ pass }}"
+        method: POST
+        body_format: json
+        headers:
+          Content-Type: application/json
+          Accept: application/json
+        body: '{"EndPointGroup":{"id":"id","name":"name","description":"description","systemDefined":true}}'
