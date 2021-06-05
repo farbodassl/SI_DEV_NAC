@@ -9,8 +9,8 @@
     - name: make REST call
       uri:
         url: https://172.17.20.151:9060/ers/config/endpointgroup
-        user: "{{ username }}"
-        password: "{{ password }}"
+        user: admin
+        password: admin
         method: POST
         body_format: json
         headers:
