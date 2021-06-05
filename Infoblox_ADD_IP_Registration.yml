@@ -10,7 +10,7 @@
         network_view: '{{ network_view | mandatory }}'
         state: present
         provider:
-          host: 172.17.20.50
+          host: '{{ host }}'
           username: '{{ username }}'
           password: '{{ password }}'
       connection: local
@@ -25,7 +25,7 @@
         network_view: '{{ network_view | mandatory }}'
         state: absent
         provider:
-          host: 172.17.20.50
+          host: '{{ host }}'
           username: '{{ username }}'
           password: '{{ password }}'
       connection: local
