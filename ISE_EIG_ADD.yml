@@ -2,6 +2,7 @@
 
 - name: Add Endpoint Identity Groups to Cisco ISE
   hosts: 172.17.20.151
+  gather_facts: false
   tasks:
     - name: make REST call
       uri:
