@@ -1,34 +1,41 @@
 ---
 - hosts: localhost
+  vars:
+    ipaddr: '{{ ipaddr }}'
+    mac: '{{ mac }}'
+    network: '{{ network }}'
+    network_view: '{{ network_view }}'
+    comment: '{{ comment }}'
+    state: '{{ state }}'
   tasks:
     - name: add ipv4 dhcp fixed address
       nios_fixed_address:
         name: ipv4_fixed
-        ipaddr: '{{ ipaddr }}'
-        mac: '{{ mac }}'
-        network: '{{ network }}'
-        network_view: '{{ network_view }}'
-        comment: '{{ comment }}'
+        ipaddr: ipaddr
+        mac: mac
+        network: 
+        network_view: 
+        comment: 
         state: present
         provider:
           host: 172.17.20.50
           username: admin
           password: infoblox
       connection: local
-      when: '{{ state }}' == 'present'
+      when: state == 'present'
       
     - name: delete ipv4 dhcp fixed address
       nios_fixed_address:
         name: ipv4_fixed
-        ipaddr: '{{ ipaddr }}'
-        mac: '{{ mac }}'
-        network: '{{ network }}'
-        network_view: '{{ network_view }}'
-        comment: '{{ comment }}'
+        ipaddr: ipaddr
+        mac: mac
+        network: network
+        network_view: network_view
+        comment: comment
         state: absent
         provider:
           host: 172.17.20.50
           username: admin
           password: infoblox
       connection: local
-      when: '{{ state }}' == 'absent'
+      when: state == 'absent'
