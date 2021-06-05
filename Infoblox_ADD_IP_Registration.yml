@@ -3,12 +3,11 @@
   tasks:
     - name: add ipv4 dhcp fixed address
       nios_fixed_address:
-        name: ipv4_fixed
+        name: '{{ name | default(omit) }}'
         ipaddr: '{{ ipaddr | mandatory }}'
         mac: '{{ mac | mandatory }}'
         network: '{{ network | mandatory }}'
         network_view: '{{ network_view | mandatory }}'
-        comment: '{{ comment | default(omit) }}'
         state: present
         provider:
           host: 172.17.20.50
@@ -19,12 +18,11 @@
       
     - name: delete ipv4 dhcp fixed address
       nios_fixed_address:
-        name: ipv4_fixed
+        name: '{{ name | default(omit) }}'
         ipaddr: '{{ ipaddr | mandatory }}'
         mac: '{{ mac | mandatory }}'
         network: '{{ network | mandatory }}'
         network_view: '{{ network_view | mandatory }}'
-        comment: '{{ comment | default(omit) }}'
         state: absent
         provider:
           host: 172.17.20.50
