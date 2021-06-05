@@ -3,7 +3,7 @@
   tasks:
     - name: add ipv4 dhcp fixed address
       nios_fixed_address:
-        name: '{{ name | default(omit) }}'
+        name: '{{ name | mandatory }}'
         ipaddr: '{{ ipaddr | mandatory }}'
         mac: '{{ mac | mandatory }}'
         network: '{{ network | mandatory }}'
@@ -18,7 +18,7 @@
       
     - name: delete ipv4 dhcp fixed address
       nios_fixed_address:
-        name: '{{ name | default(omit) }}'
+        name: '{{ name | mandatory }}'
         ipaddr: '{{ ipaddr | mandatory }}'
         mac: '{{ mac | mandatory }}'
         network: '{{ network | mandatory }}'
