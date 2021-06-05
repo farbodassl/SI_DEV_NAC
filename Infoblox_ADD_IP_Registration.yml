@@ -15,7 +15,7 @@
           username: admin
           password: infoblox
       connection: local
-      when: '{{ state }}' == "present"
+      when: state == "present"
       
     - name: delete ipv4 dhcp fixed address
       nios_fixed_address:
@@ -31,4 +31,4 @@
           username: admin
           password: infoblox
       connection: local
-      when: '{{ state }}' == "absent"
+      when: state == "absent"
