@@ -1,0 +1,15 @@
+---
+- name: Configure ipv4 dhcp fixed address
+  community.general.nios_fixed_address:
+    name: ipv4_fixed
+    ipaddr: 192.168.10.1
+    mac: 08:6d:41:e8:fd:e8
+    network: 192.168.10.0/24
+    network_view: default
+    comment: this is a test comment
+    state: present
+    provider:
+      host: "{{ host }}"
+      username: "{{ admin }}"
+      password: "{{ pass }}"
+  connection: local
