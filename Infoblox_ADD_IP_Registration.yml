@@ -13,9 +13,9 @@
         name: ipv4_fixed
         ipaddr: ipaddr
         mac: mac
-        network: 
-        network_view: 
-        comment: 
+        network: network
+        network_view: network_view
+        comment: comment
         state: present
         provider:
           host: 172.17.20.50
