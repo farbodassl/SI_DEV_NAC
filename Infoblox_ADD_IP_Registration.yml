@@ -1,5 +1,6 @@
 ---
-- tasks:
+- hosts: localhost
+  tasks:
     - name: configure ipv4 dhcp fixed address
       nios_fixed_address:
         name: ipv4_fixed
