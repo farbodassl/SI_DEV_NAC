@@ -2,7 +2,7 @@
 
 - name: Add Endpoint Identity Groups to Cisco ISE
   hosts: all
-  task:
+  tasks:
     - name: make REST call
       uri:
         url: https://172.17.20.151:9060/ers/config/endpointgroup
