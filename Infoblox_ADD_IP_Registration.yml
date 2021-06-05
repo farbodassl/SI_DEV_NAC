@@ -11,8 +11,8 @@
         state: present
         provider:
           host: 172.17.20.50
-          username: admin
-          password: infoblox
+          username: '{{ username }}'
+          password: '{{ password }}'
       connection: local
       when: state == "present"
       
@@ -26,7 +26,7 @@
         state: absent
         provider:
           host: 172.17.20.50
-          username: admin
-          password: infoblox
+          username: '{{ username }}'
+          password: '{{ password }}'
       connection: local
       when: state == "absent"
