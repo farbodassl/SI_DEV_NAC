@@ -1,15 +1,19 @@
 ---
-- name: configure ipv4 dhcp fixed address
-  nios_fixed_address:
-    name: ipv4_fixed
-    ipaddr: 192.168.10.1
-    mac: 08:6d:41:e8:fd:e8
-    network: 192.168.10.0/24
-    network_view: default
-    comment: this is a test comment
-    state: present
-    provider:
-      host: 172.17.20.50
-      username: admin
-      password: infoblox
+---
+- hosts: localhost
   connection: local
+  tasks:
+    - name: configure ipv4 dhcp fixed address
+      nios_fixed_address:
+        name: ipv4_fixed
+        ipaddr: 192.168.10.1
+        mac: 08:6d:41:e8:fd:e8
+        network: 192.168.10.0/24
+        network_view: default
+        comment: this is a test comment
+        state: present
+        provider:
+          host: 172.17.20.50
+          username: admin
+          password: infoblox
+      connection: local
