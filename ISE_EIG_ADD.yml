@@ -11,12 +11,6 @@
         headers:
           Content-Type: application/json
           Accept: application/json
-        body: "{
-                  "EndPointGroup" : {
-                  "id" : "0000",
-                  "name" : "testgroup",
-                  "description" : "description",
-                  "systemDefined" : true
-               }"
+        body: "{"EndPointGroup":{"id":"id","name":"name","description":"description","systemDefined":true}}"
                
         
