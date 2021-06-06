@@ -13,6 +13,7 @@
         password: Cisco123!
         method: POST
         force_basic_auth: yes
+        validate_certs: no
         body_format: json
         headers:
           Content-Type: application/json
