@@ -1,0 +1,8 @@
+{
+	"EndPointGroup": [{
+			"name": "testgroup",
+			"description": "testdescription",
+			"systemDefined": false
+		}
+	]
+}
