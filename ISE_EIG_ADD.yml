@@ -18,6 +18,6 @@
         headers:
           Content-Type: application/json
           Accept: application/json
-        body: '{"EndPointGroup":{"id":"id","name":"name","description":"description","systemDefined":true}}'
+        body: '{"EndPointGroup":{"id":"511","name":"AWXTEST","description":"description","systemDefined":false}}'
                
         
