@@ -8,7 +8,7 @@
   tasks:
     - name: make REST call
       uri:
-        url: https://'{{ host }}':9060/ers/config/endpointgroup
+        url: https://{{ host }}:9060/ers/config/endpointgroup
         user: '{{ username }}'
         password: '{{ password }}'
         method: POST
