@@ -19,6 +19,6 @@
         headers:
           Content-Type: application/json
           Accept: application/json
-        body: '{"EndPointGroup":{"id":"511","name":"AWXTEST","description":"description","systemDefined":false}}'
+        body: '{"EndPointGroup":{"id":"{{ username }}","name":"{{ username }}","description":"{{ username }}","systemDefined":false}}'
                
         
