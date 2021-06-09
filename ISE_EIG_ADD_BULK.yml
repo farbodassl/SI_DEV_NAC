@@ -19,4 +19,4 @@
         headers:
           Content-Type: application/json
           Accept: application/json
-        body: '{{ json }}'
+        body: '{{ lookup("Fluvius_MAB.json", "/json") }}'
