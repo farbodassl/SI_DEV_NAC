@@ -1,6 +1,6 @@
 ---
 
-- name: Add Endpoint Identity Groups to Cisco ISE
+- name: Export Endpoint Identity Groups
   hosts: localhost
   vars:
     ansible_host_key_checking: false
@@ -20,6 +20,11 @@
           Content-Type: application/json
           Accept: application/json
       register: output
+      
+    - name: Copy output to remote location
+      ansible.builtin.copy:
+        src: output.json.resources
+        dst: \\172.17.20.124\home\Farbod\"{{lookup('pipe','date +%Y%m%d%H%M%S')}}".json
       
     - debug:
         var: output.json.resources
