@@ -19,3 +19,7 @@
         headers:
           Content-Type: application/json
           Accept: application/json
+      register: output
+      
+    - debug:
+        var: output
