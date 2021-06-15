@@ -26,7 +26,7 @@
     
     - name: Copy output to remote location
       ansible.builtin.copy:
-        content: output
+        content: '{{ output.json.SearchResult.resources }}'
         dest: \\172.17.20.124\home\Farbod\"{{lookup('pipe','date +%Y-%m-%d')}}".json
       
     
