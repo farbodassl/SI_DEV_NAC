@@ -20,11 +20,13 @@
           Content-Type: application/json
           Accept: application/json
       register: output
-      
+    
+    - debug:
+        var: output.json.resources
+    
     - name: Copy output to remote location
       ansible.builtin.copy:
         content: output
         dest: \\172.17.20.124\home\Farbod\"{{lookup('pipe','date +%Y-%m-%d')}}".json
       
-    - debug:
-        var: output.json.resources
+    
