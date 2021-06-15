@@ -27,7 +27,6 @@
     - name: Copy output to remote location
       ansible.builtin.copy:
         content: '{{ output.json.SearchResult.resources }}'
-        dest: \\172.17.20.124\home\Farbod\test.json
-        owner: admin
+        dest: \\172.17.20.124\homes\fmoghimi\Farbod\test.json
       
     
