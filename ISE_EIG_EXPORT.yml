@@ -22,7 +22,7 @@
       register: output
     
     - debug:
-        var: output.json.resources
+        msg: output.json.resources
     
     - name: Copy output to remote location
       ansible.builtin.copy:
